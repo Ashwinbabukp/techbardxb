@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logoSmall from "@/assets/logo.png";
 import logoTech from "@/assets/logotech.png";
 import { PRODUCTS, SERVICES } from "@/lib/data";
 
@@ -25,6 +26,13 @@ export default function Header() {
     <header>
       <div className="wrap topbar">
         <Link href="/" className="brand" onClick={closeAll}>
+          <Image
+            src={logoSmall}
+            alt="Techbar Icon"
+            width={50}
+            height={50}
+            style={{ height: "auto" }}
+          />
           <Image
             src={logoTech}
             alt="Techbar Logo"
