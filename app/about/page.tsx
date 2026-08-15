@@ -91,15 +91,8 @@ export default function AboutPage() {
           }}
         >
           <div className="wrap">
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '80px',
-                alignItems: 'start',
-              }}
-            >
-              <div>
+            <div className="two-col-grid">
+              <div className="reveal-on-scroll">
                 <div className="kicker" style={{ marginBottom: '20px' }}>
                   OUR VISION
                 </div>
@@ -114,7 +107,7 @@ export default function AboutPage() {
                   expectations and achieve measurable competitive advantage.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <div className="kicker" style={{ marginBottom: '20px' }}>
                   OUR MISSION
                 </div>

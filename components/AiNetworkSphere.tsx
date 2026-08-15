@@ -18,7 +18,7 @@ export default function AiNetworkSphere() {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 100);
-    camera.position.z = 6.2;
+    camera.position.z = w < 480 ? 5.4 : 6.0;
 
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -106,6 +106,7 @@ export default function AiNetworkSphere() {
       h = panel.clientHeight;
       if (!w || !h) return;
       camera.aspect = w / h;
+      camera.position.z = w < 480 ? 5.4 : 6.0;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     }

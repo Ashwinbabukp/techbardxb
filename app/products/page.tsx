@@ -78,17 +78,11 @@ export default function ProductsPage() {
               <div className="kicker">PRODUCT CATEGORIES</div>
               <h2>Organized by Type</h2>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '40px',
-                marginTop: '60px',
-              }}
-            >
+            <div className="three-col-grid" style={{ marginTop: '60px' }}>
               {productCategories.map((category) => (
                 <div
                   key={category.name}
+                  className="reveal-on-scroll"
                   style={{
                     padding: '32px',
                     backgroundColor: 'var(--bg)',
@@ -138,19 +132,12 @@ export default function ProductsPage() {
           style={{ padding: '96px 0', borderBottom: '1px solid var(--line)' }}
         >
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head reveal-on-scroll">
               <div className="kicker">WHY CHOOSE TECHBAR</div>
               <h2>Product Advantages</h2>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '40px',
-                marginTop: '60px',
-              }}
-            >
-              <div>
+            <div className="two-col-grid" style={{ marginTop: '60px' }}>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Authorized Distributor
                 </h4>
@@ -159,7 +146,7 @@ export default function ProductsPage() {
                   Lenovo, and other leading technology providers.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Competitive Pricing
                 </h4>
@@ -168,7 +155,7 @@ export default function ProductsPage() {
                   various financing options available.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Fast Delivery
                 </h4>
@@ -177,7 +164,7 @@ export default function ProductsPage() {
                   logistics and supply chain management.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Complete Support
                 </h4>

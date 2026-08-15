@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className="wrap contact-grid">
-        <div>
+        <div className="reveal-on-scroll">
           <div className="kicker">Contact</div>
           <h2 style={{ marginBottom: 8 }}>Let&apos;s talk about your setup</h2>
 
@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="cta-box">
+        <div className="cta-box reveal-on-scroll">
           <h3>Get a free IT consultation</h3>
           <p>
             Tell us what you&apos;re running today and where it&apos;s falling short — we&apos;ll come back

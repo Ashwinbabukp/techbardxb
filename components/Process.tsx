@@ -4,13 +4,13 @@ export default function Process() {
   return (
     <section className="process" id="why">
       <div className="wrap">
-        <div className="section-head">
+        <div className="section-head reveal-on-scroll">
           <div className="kicker">Working Process</div>
           <h2>Why teams choose Techbar</h2>
         </div>
         <div className="process-row">
           {PROCESS.map((step) => (
-            <div key={step.idx}>
+            <div key={step.idx} className="reveal-on-scroll">
               <div className="idx">{step.idx}</div>
               <h4>{step.title}</h4>
               <p>{step.description}</p>

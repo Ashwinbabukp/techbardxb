@@ -6,14 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap" style={{ paddingTop: '60px', paddingBottom: '0' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1.1fr 0.9fr',
-            gap: '60px',
-            marginBottom: '60px',
-          }}
-        >
+        <div className="footer-main-grid">
           {/* About Section */}
           <div>
             <Link
@@ -29,9 +22,9 @@ export default function Footer() {
               <Image
                 src={logoTech}
                 alt="Techbar Logo"
-                width={150}
-                height={150}
-                style={{ height: 'auto' }}
+                width={220}
+                height={60}
+                style={{ height: 'auto', width: 'auto', maxHeight: '54px' }}
               />
               
             </Link>
@@ -169,13 +162,7 @@ export default function Footer() {
             marginBottom: '40px',
           }}
         >
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '40px',
-            }}
-          >
+          <div className="footer-info-grid">
             <div>
               <h4
                 style={{

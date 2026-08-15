@@ -34,38 +34,11 @@ export default function IndustriesPage() {
               <div className="kicker">SECTORS WE SERVE</div>
               <h2>Industry Expertise</h2>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '24px',
-                marginTop: '60px',
-              }}
-            >
+            <div className="two-col-grid" style={{ marginTop: '60px' }}>
               {INDUSTRIES.map((industry, idx) => (
                 <div
                   key={industry}
-                  style={{
-                    padding: '32px',
-                    backgroundColor: 'var(--bg-raised)',
-                    border: '1px solid rgba(0, 176, 173, 0.14)',
-                    borderRadius: 0,
-                    cursor: 'pointer',
-                    transition: 'all 0.25s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    const el = e.currentTarget as HTMLElement;
-                    el.style.borderColor = 'rgba(0, 176, 173, 0.5)';
-                    el.style.transform = 'translateY(-3px)';
-                    el.style.boxShadow =
-                      '0 14px 30px -16px rgba(0, 176, 173, 0.35)';
-                  }}
-                  onMouseLeave={(e) => {
-                    const el = e.currentTarget as HTMLElement;
-                    el.style.borderColor = 'rgba(0, 176, 173, 0.14)';
-                    el.style.transform = 'translateY(0)';
-                    el.style.boxShadow = 'none';
-                  }}
+                  className="industry-card reveal-on-scroll"
                 >
                   <div
                     style={{
@@ -99,19 +72,12 @@ export default function IndustriesPage() {
           }}
         >
           <div className="wrap">
-            <div className="section-head">
+            <div className="section-head reveal-on-scroll">
               <div className="kicker">INDUSTRY EXPERTISE</div>
               <h2>Why Industries Trust Techbar</h2>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '40px',
-                marginTop: '60px',
-              }}
-            >
-              <div>
+            <div className="three-col-grid" style={{ marginTop: '60px' }}>
+              <div className="reveal-on-scroll">
                 <h4
                   style={{
                     marginBottom: '12px',
@@ -126,7 +92,7 @@ export default function IndustriesPage() {
                   sectors and business models.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4
                   style={{
                     marginBottom: '12px',
@@ -141,7 +107,7 @@ export default function IndustriesPage() {
                   requirements and standards.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4
                   style={{
                     marginBottom: '12px',

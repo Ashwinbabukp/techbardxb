@@ -96,15 +96,8 @@ export default function ServicesPage() {
               <div className="kicker">WHY CHOOSE OUR SERVICES</div>
               <h2>Industry Leading Support</h2>
             </div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '40px',
-                marginTop: '60px',
-              }}
-            >
-              <div>
+            <div className="two-col-grid" style={{ marginTop: '60px' }}>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   24/7 Expert Support
                 </h4>
@@ -114,7 +107,7 @@ export default function ServicesPage() {
                   for your critical systems.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Rapid Deployment
                 </h4>
@@ -123,7 +116,7 @@ export default function ServicesPage() {
                   systems running efficiently as soon as possible.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Certified Professionals
                 </h4>
@@ -132,7 +125,7 @@ export default function ServicesPage() {
                   technologies to ensure the highest service quality.
                 </p>
               </div>
-              <div>
+              <div className="reveal-on-scroll">
                 <h4 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>
                   Cost Effective Solutions
                 </h4>

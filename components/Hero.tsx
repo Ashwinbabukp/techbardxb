@@ -1,10 +1,11 @@
+import Link from "next/link";
 import AiNetworkSphere from "./AiNetworkSphere";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="wrap hero-grid">
-        <div className="hero-inner">
+        <div className="hero-inner reveal-on-scroll">
           <div className="eyebrow">
             <span className="pulse-dot"></span>
             IT Infrastructure &amp; Managed Services · Dubai, UAE
@@ -17,16 +18,16 @@ export default function Hero() {
             that keep businesses across the UAE running — from a single workstation to a full data center.
           </p>
           <div className="btn-row">
-            <a href="#contact" className="btn btn-primary">
+            <Link href="/contact" className="btn btn-primary">
               Get a free consultation
-            </a>
-            <a href="#services" className="btn btn-ghost">
+            </Link>
+            <Link href="/services" className="btn btn-ghost">
               See services
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="hero-visual reveal-on-scroll">
           <div className="visual-panel">
             <AiNetworkSphere />
             <div className="visual-badge">
@@ -52,15 +53,15 @@ export default function Hero() {
 
       <div className="wrap">
         <div className="hero-stats">
-          <div>
+          <div className="reveal-on-scroll">
             <div className="num">24/7</div>
             <div className="lbl">Customer support</div>
           </div>
-          <div>
+          <div className="reveal-on-scroll">
             <div className="num">12+</div>
             <div className="lbl">Product categories</div>
           </div>
-          <div>
+          <div className="reveal-on-scroll">
             <div className="num">7</div>
             <div className="lbl">Core service lines</div>
           </div>

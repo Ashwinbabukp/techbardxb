@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="wrap about-grid">
-        <div>
+        <div className="reveal-on-scroll">
           <div className="kicker">About Us</div>
           <h2 style={{ marginBottom: 22 }}>Experience-led IT, not off-the-shelf fixes</h2>
           <p>
@@ -25,7 +25,7 @@ export default function About() {
 
         <ul className="feature-list">
           {FEATURES.map((f) => (
-            <li key={f.idx}>
+            <li key={f.idx} className="reveal-on-scroll">
               <span className="idx">{f.idx}</span>
               <div>
                 <h4>{f.title}</h4>

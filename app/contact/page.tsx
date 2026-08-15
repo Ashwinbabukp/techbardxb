@@ -62,13 +62,7 @@ export default function ContactPage() {
           style={{ padding: '96px 0', borderBottom: '1px solid var(--line)' }}
         >
           <div className="wrap">
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '80px',
-              }}
-            >
+            <div className="two-col-grid">
               {/* Contact Form */}
               <div>
                 <div className="section-head" style={{ marginBottom: '40px' }}>
