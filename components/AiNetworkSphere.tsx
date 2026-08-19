@@ -45,8 +45,8 @@ export default function AiNetworkSphere() {
       const ctx = c.getContext("2d")!;
       const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
       g.addColorStop(0, "rgba(255,255,255,1)");
-      g.addColorStop(0.25, "rgba(0,224,220,0.9)");
-      g.addColorStop(1, "rgba(0,176,173,0)");
+      g.addColorStop(0.25, "rgba(92,255,201,0.9)");
+      g.addColorStop(1, "rgba(180,140,255,0)");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, 64, 64);
       return new THREE.CanvasTexture(c);
@@ -61,7 +61,7 @@ export default function AiNetworkSphere() {
       transparent: true,
       depthWrite: false,
       blending: THREE.AdditiveBlending,
-      color: 0x00e0dc,
+      color: 0x5cffc9,
     });
     const pointCloud = new THREE.Points(pointsGeo, pointsMat);
     group.add(pointCloud);
@@ -82,13 +82,13 @@ export default function AiNetworkSphere() {
     }
     const lineGeo = new THREE.BufferGeometry();
     lineGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(linePositions), 3));
-    const lineMat = new THREE.LineBasicMaterial({ color: 0x00b0ad, transparent: true, opacity: 0.18 });
+    const lineMat = new THREE.LineBasicMaterial({ color: 0x5cffc9, transparent: true, opacity: 0.22 });
     const lineSegments = new THREE.LineSegments(lineGeo, lineMat);
     group.add(lineSegments);
 
     // inner wireframe core
     const coreGeo = new THREE.IcosahedronGeometry(1.15, 1);
-    const coreMat = new THREE.MeshBasicMaterial({ color: 0x00b0ad, wireframe: true, transparent: true, opacity: 0.25 });
+    const coreMat = new THREE.MeshBasicMaterial({ color: 0xb48cff, wireframe: true, transparent: true, opacity: 0.28 });
     const core = new THREE.Mesh(coreGeo, coreMat);
     group.add(core);
 
@@ -106,11 +106,13 @@ export default function AiNetworkSphere() {
       h = panel.clientHeight;
       if (!w || !h) return;
       camera.aspect = w / h;
-      camera.position.z = w < 480 ? 5.4 : 6.0;
+      camera.position.z = w < 360 ? 5.2 : w < 520 ? 5.6 : 6.0;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     }
     window.addEventListener("resize", onResize);
+    const resizeObserver = typeof ResizeObserver !== "undefined" ? new ResizeObserver(onResize) : null;
+    resizeObserver?.observe(panel);
 
     let raf = 0;
     function animate() {
@@ -144,6 +146,7 @@ export default function AiNetworkSphere() {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
+      resizeObserver?.disconnect();
       panel.removeEventListener("mousemove", onMouseMove);
       io?.disconnect();
       pointsGeo.dispose();

@@ -30,23 +30,6 @@ export default function Hero() {
         <div className="hero-visual reveal-on-scroll">
           <div className="visual-panel">
             <AiNetworkSphere />
-            <div className="visual-badge">
-              <span className="pulse-dot"></span>AI Core · Live
-            </div>
-            <div className="visual-readout">
-              <div>
-                <span className="k">NETWORK</span>
-                <span className="v">STABLE</span>
-              </div>
-              <div>
-                <span className="k">SECURITY</span>
-                <span className="v">MONITORED</span>
-              </div>
-              <div>
-                <span className="k">LOAD</span>
-                <span className="v">OPTIMAL</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav>
+          <nav className={mobileOpen ? "nav-open" : ""} id="site-nav">
             <ul className={`nav-list ${mobileOpen ? "open" : ""}`}>
               <li>
                 <Link href="/about" onClick={closeAll}>
@@ -151,6 +151,7 @@ export default function Header() {
             className="menu-btn"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
+            aria-controls="site-nav"
             onClick={() => setMobileOpen((open) => !open)}
           >
             {mobileOpen ? "✕" : "☰"}

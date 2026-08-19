@@ -72,121 +72,66 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit}>
                   <div style={{ marginBottom: '20px' }}>
                     <input
+                      className="field"
                       type="text"
                       name="name"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                      }}
                     />
                   </div>
                   <div style={{ marginBottom: '20px' }}>
                     <input
+                      className="field"
                       type="email"
                       name="email"
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                      }}
                     />
                   </div>
                   <div style={{ marginBottom: '20px' }}>
                     <input
+                      className="field"
                       type="tel"
                       name="phone"
                       placeholder="Phone Number"
                       value={formData.phone}
                       onChange={handleChange}
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                      }}
                     />
                   </div>
                   <div style={{ marginBottom: '20px' }}>
                     <input
+                      className="field"
                       type="text"
                       name="company"
                       placeholder="Company Name"
                       value={formData.company}
                       onChange={handleChange}
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                      }}
                     />
                   </div>
                   <div style={{ marginBottom: '20px' }}>
                     <input
+                      className="field"
                       type="text"
                       name="subject"
                       placeholder="Subject"
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                      }}
                     />
                   </div>
                   <div style={{ marginBottom: '30px' }}>
                     <textarea
+                      className="field"
                       name="message"
                       placeholder="Your Message"
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        backgroundColor: 'var(--bg-raised)',
-                        border: '1px solid rgba(0, 176, 173, 0.2)',
-                        color: 'var(--ink)',
-                        fontFamily: 'inherit',
-                        fontSize: '1rem',
-                        borderRadius: 0,
-                        resize: 'vertical',
-                      }}
                     />
                   </div>
                   <button type="submit" className="btn btn-primary">

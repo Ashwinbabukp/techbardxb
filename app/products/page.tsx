@@ -82,13 +82,7 @@ export default function ProductsPage() {
               {productCategories.map((category) => (
                 <div
                   key={category.name}
-                  className="reveal-on-scroll"
-                  style={{
-                    padding: '32px',
-                    backgroundColor: 'var(--bg)',
-                    border: '1px solid rgba(0, 176, 173, 0.14)',
-                    borderRadius: 0,
-                  }}
+                  className="reveal-on-scroll glass-card"
                 >
                   <h4
                     style={{
